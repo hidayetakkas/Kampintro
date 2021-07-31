@@ -19,17 +19,24 @@ namespace Oop3
             ICreditManager vehicleCreditManager = new VehicleCreditManager();
             //vehicleCreditManager.Calculate();
             ICreditManager housingLoanManager = new HousingLoanManager();
+            ICreditManager businessLoanManager = new BusinessLoanManager();
             //housingLoanManager.Calculate();
             ApplicationManager applicationManager = new ApplicationManager();
+            ILoggerService databaseLoggerService = new DatabaseLoggerService();
+            ILoggerService fileLoggerService = new FileLoggerService();
+            ILoggerService smsLoggerService = new SmsLoggerService();
+            List<ILoggerService> loggers = new List<ILoggerService> { databaseLoggerService, fileLoggerService, smsLoggerService };
             //1 or
-            //applicationManager.Apply(personalFinanceCreditManager);
+            //applicationManager.Apply(personalFinanceCreditManager, loggers);
             //2 or 
-            //applicationManager.Apply(vehicleCreditManager);
+            //applicationManager.Apply(vehicleCreditManager, loggers);
             //3
-            //applicationManager.Apply(housingLoanManager);
+            //applicationManager.Apply(housingLoanManager, loggers);
+            //4 or
+            applicationManager.Apply(businessLoanManager, loggers);
 
-            List<ICreditManager> credits = new List<ICreditManager>() {personalFinanceCreditManager,vehicleCreditManager,housingLoanManager };
-            applicationManager.CreditInformation(credits);
+            List<ICreditManager> credits = new List<ICreditManager>() {personalFinanceCreditManager,vehicleCreditManager,housingLoanManager,businessLoanManager };
+            //applicationManager.CreditInformation(credits);
         }
     }
 }

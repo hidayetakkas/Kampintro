@@ -5,10 +5,15 @@ using System.Text;
 namespace Oop3
 {
     class ApplicationManager
-    {
-        public void Apply(ICreditManager creditManager)
+    {   //method injection
+        public void Apply(ICreditManager creditManager, List<ILoggerService> loggerServices)
         {
             creditManager.Calculate();
+            foreach (var loggerService in loggerServices)
+            {
+                loggerService.Log();
+            }
+            
         }
         public void CreditInformation(List<ICreditManager>credits)
         {
