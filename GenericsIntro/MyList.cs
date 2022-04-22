@@ -7,6 +7,7 @@ namespace GenericsIntro
     class MyList<T>
     {
         T[] items;
+        //constructor
         public MyList()
         {
             items = new T[0];
@@ -21,6 +22,16 @@ namespace GenericsIntro
             }
 
             items[items.Length - 1] = item;
+        }
+
+        public int length
+        {
+            get { return items.Length; }
+        }
+
+        public T[] Item
+        {
+            get { return items; }
         }
     }
 }

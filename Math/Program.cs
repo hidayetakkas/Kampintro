@@ -7,9 +7,9 @@ namespace Math
         static void Main(string[] args)
         {
 
-            dortIslem dortIslem = new dortIslem();
-            dortIslem.topla(5, 6);
-            dortIslem.topla(6, 9);
+            DortIslem dortIslem = new DortIslem();
+            dortIslem.Topla(5, 6);
+            dortIslem.Topla(6, 9);
         }
     }
 }

@@ -21,7 +21,9 @@ namespace Oop3
             ICreditManager housingLoanManager = new HousingLoanManager();
             ICreditManager businessLoanManager = new BusinessLoanManager();
             //housingLoanManager.Calculate();
+
             ApplicationManager applicationManager = new ApplicationManager();
+
             ILoggerService databaseLoggerService = new DatabaseLoggerService();
             ILoggerService fileLoggerService = new FileLoggerService();
             ILoggerService smsLoggerService = new SmsLoggerService();

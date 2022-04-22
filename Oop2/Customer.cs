@@ -8,7 +8,7 @@ namespace Oop2
     {
 
         public int Id { get; set; }
-        public string CustomerId { get; set; }
+        public string CustomerNo { get; set; }
 
     }
 }

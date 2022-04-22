@@ -8,7 +8,7 @@ namespace Kampintro
         {
             string kategoriEtiketi = "Kategori";
             
-            int ogrenciSayısı = 32000;
+            int ogrenciSayisi = 32000;
             double faizOranı = 1.45;
             bool sistemeGirişBilgisi = true;
             double dolarDun = 7.55;

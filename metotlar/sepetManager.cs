@@ -4,7 +4,7 @@ using System.Text;
 
 namespace metotlar
 {
-    class sepetManager
+    class SepetManager
     {
         public void Add(Product product)
         {
